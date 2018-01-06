@@ -1,3 +1,21 @@
+import System.io;
+var filePath = "textStorage.txt"
+
+
+var sr = new File.OpenText(filePath);
+var input = "";
+input = sr.ReadLine();
+while(true){
+	if (input == null) {
+		break;
+	}
+	Debug.Log("line="+input);
+}
+sr.Close();
+
+
+
+
 var insertText = function(theString){
 	var textInsertionPoint = document.getElementById("displayText");
 	var newLine = document.createElement("BR");
