@@ -1,5 +1,3 @@
-import System.io;
-var filePath = "textStorage.txt"
 
 
 var storyText = {"0":"You will be playing as Jane Re, following an alternate timeline where she never returned to Korea, but stays in New York City."}
@@ -41,4 +39,4 @@ var createButton = function(buttonText){
 	insertionPoint.append(wrapper);
 }
 
-createButton(0);
+createButton("0");
