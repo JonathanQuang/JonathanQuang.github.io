@@ -2,18 +2,7 @@ import System.io;
 var filePath = "textStorage.txt"
 
 
-var sr = new File.OpenText(filePath);
-var input = "";
-input = sr.ReadLine();
-while(true){
-	if (input == null) {
-		break;
-	}
-	Debug.Log("line="+input);
-}
-sr.Close();
-
-
+var storyText = {"0":"You will be playing as Jane Re, following an alternate timeline where she never returned to Korea, but stays in New York City."}
 
 
 var insertText = function(theString){
@@ -39,3 +28,17 @@ var insertTextDel = function(theString){
 		}
 	}
 }
+
+var createButton = function(buttonText){
+	var btn = focument.createElement("BUTTON");
+	var wrapper = document.createElement("div");
+	var textNode = document.createTextNode(buttonText);
+	btn.appendChild(textNode);
+	btn.onClick = "insertText('text junk')"
+	btn.id = "del";
+	wrapper.append(btn);
+	var insertionPoint = document.getElementById("displayText");
+	insertionPoint.append(wrapper);
+}
+
+createButton(0);
