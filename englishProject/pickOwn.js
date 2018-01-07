@@ -26,11 +26,13 @@ var insertTextDel = function(theString){
 }
 
 var storyText = {
-	"0":"This is a test if your browser supports this program. If so, click on the button below. If not, switch to a different browser.",
+	"0":"This is a test if your browser supports this program. If so, click on the button below. If not, switch to a different browser.<insert summary text>",
 	"0options":"1.Proceed0",
 	"1":"You are Jane Re. You are together with Ed. Instead of being driven to 646 Thorn Street, Ed got off the bridge and went to the Promenade. The two of you look over the East River and the Manhattan skyline.",
-	"1options":"2.Let the silence carry on0,3.Talk about your dinner at Windows on the World1"
-	
+	"1options":"2.Let the silence carry on0,3.Talk about your dinner at Windows on the World1",
+	"2":'Ed turns to you. "You look kinda down. Is something wrong?"',
+	"3":'You talk about how your grandfather did not like the steak. Ed comments on how nobody goes there for the steak and that the bar next door is better. His accent that he represses around Beth is noticeably present. The accent reminds you of Re Myungsun commenting on you looking more Korean.',
+	"3options":"2.Bite your lip at the memory of Re Myungsum's comment1",
 }
 
 var createButton = function(buttonText,functionString){
@@ -47,9 +49,9 @@ var createButton = function(buttonText,functionString){
 	insertionPoint.appendChild(wrapper);
 }
 
-createButton("start","parseJsonThing(0)");
+createButton("start","parseJsonThing(0,0)");
 
-var parseJsonThing = function(eventIndex){
+var parseJsonThing = function(eventIndex,scoreDelta){
 	var displayText = storyText[eventIndex];
 	insertTextDel(displayText);
 	var arrayOfOptionsText = storyText[eventIndex+"options"];
@@ -59,8 +61,8 @@ var parseJsonThing = function(eventIndex){
 		var str = optionsArray[recStr];
 		console.log(str);
 		var firstPeriod = str.indexOf('.');
-		createButton(str.slice(firstPeriod+1,str.length-1),"parseJsonThing(" + str.slice(0,firstPeriod) + ")");
-
+		createButton(str.slice(firstPeriod+1,str.length-1),"parseJsonThing(" + str.slice(0,firstPeriod) + "," + str.slice(str.length-1,str.length) + ")");
+	score += parseInt(scoreDelta);
 	}
 
 }
