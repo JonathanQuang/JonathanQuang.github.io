@@ -26,7 +26,7 @@ var insertTextDel = function(theString){
 }
 
 var storyText = {
-	"0":"This is a test if your browser supports this program. If so, click on the button below. If not, switch to a different browser.<insert summary text>",
+	"0":"This is a test if your browser supports this program. If so, click on the button below. If not, switch to a different browser. This story starts off near the end of chapter 10. This scene is set the night before Jane leaves for her flight. However, this choose-your-own adventure will explore the dynamic between Jane and Ed if the flight never existed.",
 	"0options":"1.Proceed0",
 	"1":"You are Jane Re. You are together with Ed. Instead of being driven to 646 Thorn Street, Ed got off the bridge and went to the Promenade. The two of you look over the East River and the Manhattan skyline.",
 	"1options":"2.Let the silence carry on0,3.Talk about your dinner at Windows on the World1",
