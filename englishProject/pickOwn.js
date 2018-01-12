@@ -25,6 +25,8 @@ var insertTextDel = function(theString){
 	}
 }
 
+
+//Lines 90 and above define endings.
 var storyText = {
 	"0":"This is a test if your browser supports this program. If so, click on the button below. If not, switch to a different browser. This story starts off near the end of chapter 10. This scene is set the night before Jane leaves for her flight. However, this choose-your-own adventure will explore the dynamic between Jane and Ed if the flight never existed. This start your own adventure starts off with a bit of summary.",
 	"0options":"1.Proceed0",
@@ -109,6 +111,7 @@ var parseJsonThing = function(eventIndex,scoreDelta){
 	}
 	catch (err) {
 		insertText("You have reached one of five endings. To enjoy this in it's entirety, discover the other 4.");
+		createButton("start","parseJsonThing(0,0)");
 	}
 	for (recStr in optionsArray) {
 		var str = optionsArray[recStr];
