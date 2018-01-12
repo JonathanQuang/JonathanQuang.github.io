@@ -1,6 +1,6 @@
 var score = 0;
 
-
+//first, figure out how to add text statically given a string input
 var insertText = function(theString){
 	var textInsertionPoint = document.getElementById("displayText");
 	var newLine = document.createElement("BR");
@@ -11,8 +11,12 @@ var insertText = function(theString){
 	textInsertionPoint.append(newLine);
 }
 
+//after inserting text, delete previous buttons to prevent the user accessing
+//multiple parts of the decision tree at the same time.
 var insertTextDel = function(theString){
 	insertText(theString);
+	//assumes a max of ten buttons, delete them, the try and catch should prevent an error
+	//hanging up the webpage
 	for (i=0;i<10;i++){
 		try {
 			var deleteList = document.getElementById("del");
@@ -26,7 +30,13 @@ var insertTextDel = function(theString){
 }
 
 
+//The decision tree was compressed into a json object where things are defined line by line
+//a number denotes the event ID
+//a number plus the word options defined the options the player can choose from
+//There is metadata added for the sake of being able to render buttons statically that lead to the right event
 //Lines 90 and above define endings.
+//the rest is standard situations and options. 
+//this part took approximately three hours due to debugging formatting errors
 var storyText = {
 	"0":"This is a test if your browser supports this program. If so, click on the button below. If not, switch to a different browser. This story starts off near the end of chapter 10. This scene is set the night before Jane leaves for her flight. However, this choose-your-own adventure will explore the dynamic between Jane and Ed if the flight never existed. This choose-your-own adventure starts off with a bit of summary.",
 	"0options":"1.Proceed0",
@@ -85,6 +95,7 @@ var storyText = {
 	"94": 'A few weeks later, Ed and Beth have divorced. Beth wins Devon in the divorce. At first, your life with Ed was going smoothly. However, when the two of you go out to a part that Nina invited you to, Ed is clearly upset. His idea of an ideal night is a nice dinner at home with you, but this conflicts with you wanting to enjoy time with friends as well. You do not want to feel trapped in a relationship. You decide to break up with Ed.'
 }
 
+//create a button that can call upon the json parser function
 var createButton = function(buttonText,functionString){
 	var btn = document.createElement("BUTTON");
 	var wrapper = document.createElement("div");
@@ -99,12 +110,16 @@ var createButton = function(buttonText,functionString){
 	insertionPoint.appendChild(wrapper);
 }
 
+//create the initial json
 createButton("start","parseJsonThing(0,0)");
 
+//this function parses the json data to generate the appropriate buttons
+//in a pseudo-recursive manner
 var parseJsonThing = function(eventIndex,scoreDelta){
 	var displayText = storyText[eventIndex];
 	insertTextDel(displayText);
 	var arrayOfOptionsText = storyText[eventIndex+"options"];
+	//this try and catch exists for thr sake of restarting the adventure upon hitting an ending
 	try{
 		var optionsArray = arrayOfOptionsText.split(',');
 		console.log(optionsArray);
@@ -113,6 +128,7 @@ var parseJsonThing = function(eventIndex,scoreDelta){
 		insertText("You have reached one of five endings. To enjoy this in it's entirety, discover the other 4.");
 		createButton("start","parseJsonThing(0,0)");
 	}
+	//this iterates through the appropriate JSON options entry and parses it to generate the apporpriate buttons
 	for (recStr in optionsArray) {
 		var str = optionsArray[recStr];
 		console.log(str);
