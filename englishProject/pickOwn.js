@@ -28,7 +28,7 @@ var insertTextDel = function(theString){
 
 //Lines 90 and above define endings.
 var storyText = {
-	"0":"This is a test if your browser supports this program. If so, click on the button below. If not, switch to a different browser. This story starts off near the end of chapter 10. This scene is set the night before Jane leaves for her flight. However, this choose-your-own adventure will explore the dynamic between Jane and Ed if the flight never existed. This start your own adventure starts off with a bit of summary.",
+	"0":"This is a test if your browser supports this program. If so, click on the button below. If not, switch to a different browser. This story starts off near the end of chapter 10. This scene is set the night before Jane leaves for her flight. However, this choose-your-own adventure will explore the dynamic between Jane and Ed if the flight never existed. This choose-your-own adventure starts off with a bit of summary.",
 	"0options":"1.Proceed0",
 	"1":"You are Jane Re. You are together with Ed. Instead of being driven to 646 Thorn Street, Ed got off the bridge and went to the Promenade. The two of you look over the East River and the Manhattan skyline.",
 	"1options":"2.Let the silence carry on0,3.Talk about your dinner at Windows on the World1",
@@ -38,9 +38,9 @@ var storyText = {
 	"3options":"2.Bite your lip at the memory of Re Myungsum's comment1",
 	"4":"You talk about your Korean mother and American father and all the friction it has caused in you life. Ed responds with an anecdote about his Italian mother and Irish father. He leans in closer to you, and tells you how much he missed you, blushing while doing so.",
 	"4options":"6.Tease him1",
-	"5":'Awkward silence begins to fill the space. You know it. He knows it too, but at least he tries to break the silence. Ed tells you how much he misses you, and blushes while doing so.He eventually confesses to you.',
+	"5":'Awkward silence begins to fill the space. You know it. He knows it too, but at least he tries to break the silence. Ed tells you how much he misses you, and blushes while doing so. He eventually confesses to you.',
 	"5options":"7.Let the scene continue0",
-	"6":'You tell him, "Keep it together Farley". Ed laughs. He begins to confess his love for you',
+	"6":'You tell him, "Keep it together Farley". Ed laughs. He begins to confess his love for you.',
 	"6options":"7.Let the scene continue0",
 	"7":'He leans in for a kiss. Warnings fire off in the back of your head, but your heart says otherwise. There is so much wrong with this situation, but you have your own life to consider as well. What will you do at this crucial moment?',
 	"7options":"8.Listen to those warnings and slap him0,9.Let him kiss you (but never kiss back)1",
@@ -55,7 +55,7 @@ var storyText = {
 	"13":"It's just another day at the Mazer-Farley household, but you can't ignore what happened the previous night. What's your plan on how to interact with Ed?",
 	"13options":'91.This is too awkward. You can barely look at him straight in the face. You should avoid your nights in the kitchen with Ed.0,92. Be up front with Ed. Tell him that you want to stay friends.0,14. Confess your love to him at the nearest opportunity.1',
 	"14":'You knew this would happen. He invites you to his bedroom, but he simply lacked enough passion to start. You could sense his hesitation in the bedroom. Perhaps your previous actions caused him to have some of his own doubts.',
-	"14options":"91.The next few weeks working at the Mazer-Farley household is simply too awkward. You can barely look at him straight in the face. Ed has also stopped visiting the kitchen during the night. However, you can't very well stop working now, can you?0",
+	"14options":"91.The next few weeks working at the Mazer-Farley household is simply too awkward. You can barely look at him straight in the face. Ed has also stopped visiting the kitchen during the night. You have no real reason to stop working though.0",
 	"15":'"Jane, I have never felt this way with Beth. With you, I feel like I am with someone who understands me, not someone who oppresses me."',
 	"15options":"18.Question if he understands that this might evolve to a long term affair.0,19. Tell him that you plan on keeping this affair a secret.1",
 	"16":'"We should try our best to keep this a secret from Devon too. She should not have to put up with this at her age.',
