@@ -74,7 +74,7 @@ var storyText = {
 	"23options":"24. Ask no further questions. Kiss him on the cheek to end the conversation and go home.0,15.Ask about how the relationship will work with regard to Beth.1,16.Ask how the relationship is going to work with regard to Devon in the short term.1",
 	"24":'Nothing much has changed at the Mazer-Farley household, except you and Ed are a lot more friendly. You can feel your love for him growing, but also your guilt.',
 	"24options":"93.Tell Beth0,25.Tell Devon0,26.Continue your nightly kitchen sessions with Ed.0,90. Your guilt and your heart are tearing you apart. You decide that this situation is not healthy for you and decide to leave permanently.0",
-	"25":'Devon says, "You know, I am honestly not surprised. Your secret is safe with me. Beth is starting to get on my nerves.',
+	"25":'Devon says, "You know, I am honestly not surprised. Your secret is safe with me. Beth is starting to get on my nerves."',
 	"25options":'93.Tell Beth.0,26.Continue your nightly kitchen sessions with Ed.0,90. Your guilt and your heart are tearing you apart. You decide that this situation is not healthy for you and decide to leave permanently.0',
 	"26":'You can feel the passion between the two of you growing with each night. Eventually, you end up in his bedroom. After that, you and Ed start to plan your lives away from Beth.',
 	"26options":"93.You cannot bear the guilt any longer. You should tell Beth.0,90. Your guilt and your heart are tearing you apart. You decide that this situation is not healthy for you and decide to leave permanently.0,94.You go through with the plan.0",
