@@ -5,9 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width-device-width, initial-scale=1, shrinkt to-fit=no">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<link rel="stylesheet" href="defaultStyles.css">
 </head>
-<body>
+<body style="margin:5px;">
 	<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -26,16 +25,40 @@
 			<div class = "navbar-nav">
 				<a class="nav-item nav-link" href="projects/emotion-playlist.html">|Emotion Based Playlist Generator|</a>
 			</div>
+			</div>
 		</div>
 	</nav>
+	
+	<h1>Emotion Based Playlist generator</h1>
+	<br>
+	<h2>What is this?</h2>
+	<br>
+	<p>
+	This project combines multiple REST APIs and Python's Flask Library to form a lightweight web application that<br>
+	generates a playlist using a person's lastFM profile as the initial source of songs and picking out songs whose lyrics display a certain emotion
+	</p>
+	<h2>How does it work?</h2>
+	<p>A standard python Flask app is used to serve web content. There is a standard username and password login system that is stored<br>
+	in an sqlite3 database. The user inputs a lastFM account and selects from a list of emotions to generate a playlist<br>
+	The process for generating a playlist is detailed below.</p>
+	<ol>
+		<li>We use the lastFM API to fetch a list of songs from the provided link</li>
+		<li>The titles of the list returned from the lastFM API are used to find the lyrics of the song via the musixMatch API</li>
+		<li>The first few lyrics of the musixMatch API are passed into Watson's Tone Analyzer to generate a list of emotions per song</li>
+		<li>The results of this entire process are stored into a DB so that when the user makes another request for a playlist with the same<br>
+		last FM account, the whole process described above is not done over again as this will exhaust data limits for the API keys quicker.<br>
+		The user does have the option for forcing an update of the stored songs incase new songs are added to the lastFM account</li>
+		<li>The songs with the proper emotion are displayed on a horizontal slide show using the Youtube API and selecting the first result from it</li>
+	</ol>
 
 	<br>
-	<div class="container">
-		<div class="jumbotron">
-			<h1>Jonathan Quang's Project page</h1>
-		</div>
-	</div>
-	
+	<p>The project can be found <a href="https://github.com/JFreud/jubilant-api-project">here</a>.</p><br>
+	<p>This project was done with the help of Henry Zheng, Jerome Freudenberg, and Daniel Chernovolenko</p>
+
+
+</body>
+
+
 
 
 
