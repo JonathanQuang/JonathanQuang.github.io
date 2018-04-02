@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jonathan Quang webpage</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1, shrinkt to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+</head>
+<body style="margin:5px;">
+	<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand">Projects</a>
+		<div class = "collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class = "navbar-nav">
+				<a class="nav-item nav-link" href="../index.html">|Home|</a>
+			</div>
+			<div class = "navbar-nav">
+				<a class="nav-item nav-link" href="../englishProject/englishProject.html">|HS English Project|</a>
+			</div>
+			<div class = "navbar-nav">
+				<a class="nav-item nav-link" href="wifi-basher.html">|Wifi-Basher|</a>
+			</div>
+			<div class = "navbar-nav">
+				<a class="nav-item nav-link" href="emotion-playlist.html">|Emotion Based Playlist Generator|</a>
+			</div>
+			<div class = "navbar-nav">
+				<a class="nav-item nav-link" href="minigame-boardgame.html">|Boardgame with Minigames|</a>
+			</div>
+			</div>
+		</div>
+	</nav>
+	
+	<h1>Boardgame with Minigames|</h1>
+	<br>
+	<h2>What is this?</h2>
+	<br>
+	<p>
+	This project was an experiment Javascript and Python's Flask Library for a same-screen multiplayer game inspired by Mario Party<br>
+	It features three minigames.
+	</p>
+	<h2>How does it work?</h2>
+	<p>A standard python Flask app is used to serve web content. The user is given a game number that corresponds to a row in our sqlite3<br>
+	database. The row contains data about how many coins each player has as well as the state of the board.
+	</p>
+	<br>
+	<p>Below is a sample minigame from the project. W and I start the wheels and ASD and JKL stop them</p>
+	
+<script type="text/javascript" src="slots.js">
+	</script>
+	
+	<div class="grid-x grid-margin-x" style="text-align: center;">
+      <div class="cell small-6">
+				<div id = "container" style = "background-color:black;width:350px;height:400px;position:relative;">
+				<div id = "leftWheel0" style = "background-color:red;width:100px;height:100px;position:absolute;">
+				</div>
+				<div id = "leftWheel1" style = "background-color:blue;width:100px;height:100px;position:absolute;">
+				</div>
+				<div id = "leftWheel2" style = "background-color:green;width:100px;height:100px;position:absolute;">
+				</div>
+				<div id = "leftWheel3" style = "background-color:yellow;width:100px;height:100px;position:absolute;">
+				</div>
+				<div id = "middleWheel0" style = "background-color:red;width:100px;height:100px;position:absolute;right:150px;">
+				</div>
+				<div id = "middleWheel1" style = "background-color:blue;width:100px;height:100px;position:absolute;right:150px;">
+				</div>
+				<div id = "middleWheel2" style = "background-color:green;width:100px;height:100px;position:absolute;right:150px;">
+				</div>
+				<div id = "middleWheel3" style = "background-color:yellow;width:100px;height:100px;position:absolute;right:150px;">
+				</div>
+				<div id = "rightWheel0" style = "background-color:red;width:100px;height:100px;position:absolute;right:50px;">
+				</div>
+				<div id = "rightWheel1" style = "background-color:blue;width:100px;height:100px;position:absolute;right:50px;">
+				</div>
+				<div id = "rightWheel2" style = "background-color:green;width:100px;height:100px;position:absolute;right:50px;">
+				</div>
+				<div id = "rightWheel3" style = "background-color:yellow;width:100px;height:100px;position:absolute;right:50px;">
+				</div>
+				<div id = "marker" style = "background-color:grey;width:50px;height:400px;position:absolute;right:0px;"></div>
+				<div id = "marker" style = "background-color:cyan;width:50px;height:10px;position:absolute;right:0px;top:190px;"></div>
+				</div>
+				<h3 id = "p1Results"></h3>
+				<h3 id = "p1Score"></h3>
+			</div>
+			<div class="cell small-6">
+				<div id = "container" style = "background-color:black;width:350px;height:400px;position:relative;">
+				<div id = "2leftWheel0" style = "background-color:red;width:100px;height:100px;position:absolute;">
+				</div>
+				<div id = "2leftWheel1" style = "background-color:blue;width:100px;height:100px;position:absolute;">
+				</div>
+				<div id = "2leftWheel2" style = "background-color:green;width:100px;height:100px;position:absolute;">
+				</div>
+				<div id = "2leftWheel3" style = "background-color:yellow;width:100px;height:100px;position:absolute;">
+				</div>
+				<div id = "2middleWheel0" style = "background-color:red;width:100px;height:100px;position:absolute;right:150px;">
+				</div>
+				<div id = "2middleWheel1" style = "background-color:blue;width:100px;height:100px;position:absolute;right:150px;">
+				</div>
+				<div id = "2middleWheel2" style = "background-color:green;width:100px;height:100px;position:absolute;right:150px;">
+				</div>
+				<div id = "2middleWheel3" style = "background-color:yellow;width:100px;height:100px;position:absolute;right:150px;">
+				</div>
+				<div id = "2rightWheel0" style = "background-color:red;width:100px;height:100px;position:absolute;right:50px;">
+				</div>
+				<div id = "2rightWheel1" style = "background-color:blue;width:100px;height:100px;position:absolute;right:50px;">
+				</div>
+				<div id = "2rightWheel2" style = "background-color:green;width:100px;height:100px;position:absolute;right:50px;">
+				</div>
+				<div id = "2rightWheel3" style = "background-color:yellow;width:100px;height:100px;position:absolute;right:50px;">
+				</div>
+				<div id = "marker" style = "background-color:grey;width:50px;height:400px;position:absolute;right:0px;"></div>
+				<div id = "marker" style = "background-color:cyan;width:50px;height:10px;position:absolute;right:0px;top:190px;"></div>
+				</div>
+				<h3 id = "p2Results"></h3>
+				<h3 id = "p2Score"></h3>
+				</div>
+			<div id = "reportResults" style="text-align: center;"></div>
+		</div>
+	
+	<p>The project can be found <a href="https://github.com/tiffanychenn/DIJiTal">here</a>.</p><br>
+	<p>This project was done with the help of Tiffany Chen, Iris Tao, and Donia Tung</p>
+
+
+</body>
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>
