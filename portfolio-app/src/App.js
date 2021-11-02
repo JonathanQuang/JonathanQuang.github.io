@@ -5,6 +5,7 @@ import Topbar from './components/topBar.js';
 import Background from './components/background.js';
 import WorkExperience from './components/workExperience.js';
 import Projects from './components/projects.js'
+import ContactMe from './components/contactMe.js'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Home></Home>
           <WorkExperience></WorkExperience>
           <Projects></Projects>
+          <ContactMe></ContactMe>
           
         </main>
         

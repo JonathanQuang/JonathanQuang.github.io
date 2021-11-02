@@ -13,10 +13,10 @@ export default class Home extends Component {
         <p>I'm a Software Engineer</p>
       </blockquote>
 
-      <section>
-        I graduated from Georgia Institute of Technology with a Bachelors of Science in Computer science in 2021. 
-        I originally wanted to be a doctor, until coding became my primary passion in high school.
-        Outside of coding, my interests include finance (mainly geeking out about stock and options), math, and AI.
+      <section> 
+        I discovered coding as my primary passion in high school. 
+        I graduated from Georgia Institute of Technology with a Bachelors of Science in Computer science in 2021, and am currently pursuing a career in software engineering
+        Outside of coding, my interests include finance (mainly geeking out about stock and options), lo-fi music, math, and AI.
       </section>
 
       <section class="light">

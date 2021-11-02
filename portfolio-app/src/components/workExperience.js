@@ -11,13 +11,16 @@ export default class WorkExperience extends Component {
                     <p>
                         <ul>
                             <li>
-                            Migrated parts of monolothic web backend code to a microservice
+                            Migrated parts of monolothic web backend code to a microservice in C#.
                             </li>
                             <li>
-                            Wrote MSSQl code to clean up tables in Roblox's databases
+                            Work with Amazon SQS to create scalable processes to asynchronously add data to an MSSQL database.
                             </li>
                             <li>
-                            Descriptions will be updated as I continue working at this compan
+                            Wrote MSSQL code to clean up tables in Roblox's databases
+                            </li>
+                            <li>
+                            Descriptions will be updated as I continue working at this company
                             </li>
                         </ul>
                      </p>
